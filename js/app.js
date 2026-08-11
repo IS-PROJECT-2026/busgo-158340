@@ -1,0 +1,1 @@
+console.log("BusGo application loaded successfully.");
