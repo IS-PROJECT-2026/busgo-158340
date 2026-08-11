@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1.5rem 1rem;
+    }
+}
