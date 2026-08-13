@@ -43,9 +43,189 @@
 </header>
 
     <main>
-        <h2>Welcome to BusGo</h2>
-        <p>Book your bus ticket quickly and easily.</p>
-    </main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">TRAVEL WITH CONFIDENCE</p>
+
+            <h1>Your Journey Starts Here</h1>
+
+            <p class="hero-description">
+                Book your bus tickets quickly and easily with BusGo.
+                Find your route, choose your seat, and travel with ease.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Search Section -->
+    <section class="search-section">
+
+        <div class="search-card">
+
+            <h2>Find Your Bus</h2>
+
+            <form class="search-form">
+
+                <div class="form-group">
+                    <label for="from">From</label>
+
+                    <select id="from" name="from">
+                        <option value="">Select departure</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="nakuru">Nakuru</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="to">To</label>
+
+                    <select id="to" name="to">
+                        <option value="">Select destination</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="nakuru">Nakuru</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="travel-date">Travel Date</label>
+
+                    <input
+                        type="date"
+                        id="travel-date"
+                        name="travel-date"
+                    >
+                </div>
+
+
+                <button type="submit" class="search-button">
+                    Search Buses
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features-section">
+
+        <div class="section-heading">
+            <p class="section-label">WHY BUSGO?</p>
+            <h2>Travel Made Simple</h2>
+        </div>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <div class="feature-icon">🚌</div>
+
+                <h3>Easy Booking</h3>
+
+                <p>
+                    Find and book your preferred bus route
+                    in just a few simple steps.
+                </p>
+            </article>
+
+
+            <article class="feature-card">
+                <div class="feature-icon">💺</div>
+
+                <h3>Choose Your Seat</h3>
+
+                <p>
+                    Select your preferred seat before
+                    completing your booking.
+                </p>
+            </article>
+
+
+            <article class="feature-card">
+                <div class="feature-icon">🎫</div>
+
+                <h3>Digital Tickets</h3>
+
+                <p>
+                    Access your booking information
+                    conveniently from your device.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Routes -->
+    <section class="routes-section" id="routes">
+
+        <div class="section-heading">
+            <p class="section-label">EXPLORE</p>
+            <h2>Popular Routes</h2>
+        </div>
+
+
+        <div class="route-grid">
+
+            <article class="route-card">
+                <div>
+                    <span>Nairobi</span>
+                    <strong>→</strong>
+                    <span>Mombasa</span>
+                </div>
+
+                <p>From KSh 1,500</p>
+            </article>
+
+
+            <article class="route-card">
+                <div>
+                    <span>Nairobi</span>
+                    <strong>→</strong>
+                    <span>Kisumu</span>
+                </div>
+
+                <p>From KSh 1,200</p>
+            </article>
+
+
+            <article class="route-card">
+                <div>
+                    <span>Nairobi</span>
+                    <strong>→</strong>
+                    <span>Nakuru</span>
+                </div>
+
+                <p>From KSh 800</p>
+            </article>
+
+
+            <article class="route-card">
+                <div>
+                    <span>Mombasa</span>
+                    <strong>→</strong>
+                    <span>Nairobi</span>
+                </div>
+
+                <p>From KSh 1,500</p>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
 
     <script src="js/app.js"></script>
 </body>
