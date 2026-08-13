@@ -66,50 +66,58 @@
 
             <h2>Find Your Bus</h2>
 
-            <form class="search-form">
+            <form class="search-form" id="bus-search-form">
 
-                <div class="form-group">
-                    <label for="from">From</label>
+    <div class="form-group">
+        <label for="from">Departure</label>
 
-                    <select id="from" name="from">
-                        <option value="">Select departure</option>
-                        <option value="nairobi">Nairobi</option>
-                        <option value="mombasa">Mombasa</option>
-                        <option value="kisumu">Kisumu</option>
-                        <option value="nakuru">Nakuru</option>
-                    </select>
-                </div>
-
-
-                <div class="form-group">
-                    <label for="to">To</label>
-
-                    <select id="to" name="to">
-                        <option value="">Select destination</option>
-                        <option value="nairobi">Nairobi</option>
-                        <option value="mombasa">Mombasa</option>
-                        <option value="kisumu">Kisumu</option>
-                        <option value="nakuru">Nakuru</option>
-                    </select>
-                </div>
+        <select id="from" name="from" required>
+            <option value="">Select departure</option>
+            <option value="nairobi">Nairobi</option>
+            <option value="mombasa">Mombasa</option>
+            <option value="kisumu">Kisumu</option>
+            <option value="nakuru">Nakuru</option>
+            <option value="eldoret">Eldoret</option>
+        </select>
+    </div>
 
 
-                <div class="form-group">
-                    <label for="travel-date">Travel Date</label>
-
-                    <input
-                        type="date"
-                        id="travel-date"
-                        name="travel-date"
-                    >
-                </div>
+    <div class="route-swap" aria-hidden="true">
+        ⇄
+    </div>
 
 
-                <button type="submit" class="search-button">
-                    Search Buses
-                </button>
+    <div class="form-group">
+        <label for="to">Destination</label>
 
-            </form>
+        <select id="to" name="to" required>
+            <option value="">Select destination</option>
+            <option value="nairobi">Nairobi</option>
+            <option value="mombasa">Mombasa</option>
+            <option value="kisumu">Kisumu</option>
+            <option value="nakuru">Nakuru</option>
+            <option value="eldoret">Eldoret</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="travel-date">Travel Date</label>
+
+        <input
+            type="date"
+            id="travel-date"
+            name="travel-date"
+            required
+        >
+    </div>
+
+
+    <button type="submit" class="search-button">
+        Search Buses
+    </button>
+
+</form>
 
         </div>
 
