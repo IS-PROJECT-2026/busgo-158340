@@ -10,6 +10,81 @@ menuToggle.addEventListener("click", () => {
 const searchForm = document.getElementById("bus-search-form");
 
 const busCards = document.querySelectorAll(".bus-card");
+const seatSelection =
+    document.getElementById("seat-selection");
+
+const selectedBusInfo =
+    document.getElementById("selected-bus-info");
+
+const summaryBus =
+    document.getElementById("summary-bus");
+
+const summaryRoute =
+    document.getElementById("summary-route");
+
+const summaryPrice =
+    document.getElementById("summary-price");
+    const selectBusButtons =
+    document.querySelectorAll(".select-bus-button");
+
+
+selectBusButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const busCard =
+            button.closest(".bus-card");
+
+
+        const busName =
+            busCard.querySelector("h3").textContent;
+
+
+        const routePoints =
+            busCard.querySelectorAll(".route-point span");
+
+
+        const from =
+            routePoints[0].textContent;
+
+        const to =
+            routePoints[1].textContent;
+
+
+        const price =
+            busCard.querySelector(
+                ".bus-details div:last-child strong"
+            ).textContent;
+
+
+        // Update seat selection information
+
+        selectedBusInfo.textContent =
+            `${busName} — ${from} to ${to}`;
+
+
+        summaryBus.textContent =
+            busName;
+
+        summaryRoute.textContent =
+            `${from} → ${to}`;
+
+        summaryPrice.textContent =
+            price;
+
+
+        // Show seat selection
+
+        seatSelection.style.display = "block";
+
+
+        seatSelection.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
 
 const resultsMessage = document.getElementById(
     "search-results-message"
@@ -114,5 +189,52 @@ resetButton.addEventListener("click", function () {
     });
 
     resultsMessage.textContent = "";
+
+});
+/* =========================================
+   Seat Selection
+   ========================================= */
+
+const seats = document.querySelectorAll(".seat.available");
+
+const summarySeat =
+    document.getElementById("summary-seat");
+
+const continueButton =
+    document.getElementById("continue-booking");
+
+
+let selectedSeat = null;
+
+
+seats.forEach(function (seat) {
+
+    seat.addEventListener("click", function () {
+
+        // Remove previous selection
+
+        seats.forEach(function (otherSeat) {
+            otherSeat.classList.remove("selected");
+        });
+
+
+        // Select clicked seat
+
+        seat.classList.add("selected");
+
+        selectedSeat = seat.dataset.seat;
+
+
+        // Update booking summary
+
+        summarySeat.textContent =
+            `Seat ${selectedSeat}`;
+
+
+        // Enable continue button
+
+        continueButton.disabled = false;
+
+    });
 
 });

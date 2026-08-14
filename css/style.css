@@ -432,3 +432,207 @@ a:focus {
 .reset-search-button:hover {
     background: #f2f5f2;
 }
+/* =========================================
+   Seat Selection
+   ========================================= */
+
+.seat-selection-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.seat-selection-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+
+/* Bus Layout */
+
+.bus-layout {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #f8faf8;
+}
+
+.bus-driver {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    border-bottom: 1px solid #d1d5db;
+}
+
+.bus-driver span {
+    padding: 0.5rem 0.75rem;
+
+    border-radius: 6px;
+
+    background: #e5e7eb;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+/* Seats */
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0.75rem;
+}
+
+.seat {
+    height: 48px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.seat.available:hover {
+    transform: translateY(-2px);
+}
+
+.seat.selected {
+    background: #103713;
+    color: white;
+    border-color: #103713;
+}
+
+.seat.occupied {
+    background: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* Booking Summary */
+
+.booking-summary {
+    padding: 2rem;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.booking-summary h3 {
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-row span {
+    color: #666;
+}
+
+.summary-row strong {
+    text-align: right;
+}
+
+
+/* Continue */
+
+.continue-button {
+    width: 100%;
+
+    margin-top: 1.5rem;
+
+    padding: 0.9rem;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #103713;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.continue-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Seat Legend */
+
+.seat-legend {
+    display: flex;
+    justify-content: center;
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+}
+
+.seat-legend > div {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    font-size: 0.85rem;
+}
+
+.legend-seat {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.legend-seat.available {
+    background: white;
+}
+
+.legend-seat.selected {
+    background: #103713;
+}
+
+.legend-seat.occupied {
+    background: #d1d5db;
+}
+#seat-selection {
+    display: none;
+}
