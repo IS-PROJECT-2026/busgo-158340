@@ -506,6 +506,169 @@
     </div>
 
 </section>
+<!-- Seat Selection -->
+<section class="seat-selection-section" id="seat-selection">
+
+    <div class="section-heading">
+        <p class="section-label">BOOK YOUR JOURNEY</p>
+        <h2>Select Your Seat</h2>
+
+        <p id="selected-bus-info">
+            Select a bus to choose your preferred seat.
+        </p>
+    </div>
+
+
+    <div class="seat-selection-container">
+
+        <!-- Bus Layout -->
+        <div class="bus-layout">
+
+            <div class="bus-driver">
+                <span>DRIVER</span>
+            </div>
+
+
+            <div class="seat-grid">
+
+                <button class="seat available" data-seat="1">
+                    1
+                </button>
+
+                <button class="seat available" data-seat="2">
+                    2
+                </button>
+
+
+                <button class="seat available" data-seat="3">
+                    3
+                </button>
+
+                <button class="seat occupied" data-seat="4" disabled>
+                    4
+                </button>
+
+
+                <button class="seat available" data-seat="5">
+                    5
+                </button>
+
+                <button class="seat available" data-seat="6">
+                    6
+                </button>
+
+
+                <button class="seat occupied" data-seat="7" disabled>
+                    7
+                </button>
+
+                <button class="seat available" data-seat="8">
+                    8
+                </button>
+
+
+                <button class="seat available" data-seat="9">
+                    9
+                </button>
+
+                <button class="seat available" data-seat="10">
+                    10
+                </button>
+
+
+                <button class="seat available" data-seat="11">
+                    11
+                </button>
+
+                <button class="seat available" data-seat="12">
+                    12
+                </button>
+
+
+                <button class="seat occupied" data-seat="13" disabled>
+                    13
+                </button>
+
+                <button class="seat available" data-seat="14">
+                    14
+                </button>
+
+
+                <button class="seat available" data-seat="15">
+                    15
+                </button>
+
+                <button class="seat available" data-seat="16">
+                    16
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Booking Summary -->
+        <div class="booking-summary">
+
+            <h3>Booking Summary</h3>
+
+            <div class="summary-row">
+                <span>Bus</span>
+                <strong id="summary-bus">Not selected</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Route</span>
+                <strong id="summary-route">Not selected</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Seat</span>
+                <strong id="summary-seat">Not selected</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Price</span>
+                <strong id="summary-price">KSh 0</strong>
+            </div>
+
+
+            <button
+                type="button"
+                class="continue-button"
+                id="continue-booking"
+                disabled
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Seat Legend -->
+
+    <div class="seat-legend">
+
+        <div>
+            <span class="legend-seat available"></span>
+            Available
+        </div>
+
+        <div>
+            <span class="legend-seat selected"></span>
+            Selected
+        </div>
+
+        <div>
+            <span class="legend-seat occupied"></span>
+            Occupied
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 

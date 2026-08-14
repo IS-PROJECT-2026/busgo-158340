@@ -210,3 +210,22 @@
     }
 
 }
+.seat-selection-section {
+    padding: 3rem 1rem;
+}
+
+.seat-selection-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.bus-layout {
+    max-width: 320px;
+    padding: 1.5rem;
+}
+
+.seat-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
