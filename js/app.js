@@ -203,7 +203,6 @@ const summarySeat =
 const continueButton =
     document.getElementById("continue-booking");
 
-
 let selectedSeat = null;
 
 
@@ -211,28 +210,38 @@ seats.forEach(function (seat) {
 
     seat.addEventListener("click", function () {
 
-        // Remove previous selection
+        const clickedSeat = seat.dataset.seat;
 
+        // If the selected seat is clicked again, deselect it
+        if (selectedSeat === clickedSeat) {
+
+            seat.classList.remove("selected");
+
+            selectedSeat = null;
+
+            summarySeat.textContent =
+                "Not selected";
+
+            continueButton.disabled = true;
+
+            return;
+        }
+
+        // Remove previous selection
         seats.forEach(function (otherSeat) {
             otherSeat.classList.remove("selected");
         });
 
-
-        // Select clicked seat
-
+        // Select the new seat
         seat.classList.add("selected");
 
-        selectedSeat = seat.dataset.seat;
-
+        selectedSeat = clickedSeat;
 
         // Update booking summary
-
         summarySeat.textContent =
             `Seat ${selectedSeat}`;
 
-
-        // Enable continue button
-
+        // Enable Continue button
         continueButton.disabled = false;
 
     });
