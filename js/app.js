@@ -24,6 +24,8 @@ const summaryRoute =
 
 const summaryPrice =
     document.getElementById("summary-price");
+const summaryDate =
+    document.getElementById("summary-date");    
     const selectBusButtons =
     document.querySelectorAll(".select-bus-button");
 
@@ -55,6 +57,8 @@ selectBusButtons.forEach(function (button) {
             busCard.querySelector(
                 ".bus-details div:last-child strong"
             ).textContent;
+            const travelDate =
+    document.getElementById("travel-date").value;
 
 
         // Update seat selection information
@@ -71,7 +75,8 @@ selectBusButtons.forEach(function (button) {
 
         summaryPrice.textContent =
             price;
-
+summaryDate.textContent =
+    travelDate;
 
         // Show seat selection
 
@@ -83,6 +88,7 @@ selectBusButtons.forEach(function (button) {
         });
 
     });
+    
 
 });
 
