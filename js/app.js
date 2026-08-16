@@ -247,3 +247,12 @@ seats.forEach(function (seat) {
     });
 
 });
+continueButton.addEventListener("click", function () {
+
+    if (!selectedSeat) {
+        return;
+    }
+
+    alert(`Seat ${selectedSeat} selected successfully!`);
+
+});
