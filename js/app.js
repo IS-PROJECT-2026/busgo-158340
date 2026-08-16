@@ -274,11 +274,15 @@ continueButton.addEventListener("click", function () {
         return;
     }
 
-    showConfirmation(
-        busName,
-        route,
-        selectedSeat,
-        price
-    );
+   const travelDate =
+    document.getElementById("travel-date").value;
+
+showConfirmation(
+    busName,
+    route,
+    selectedSeat,
+    price,
+    travelDate
+);
 
 });
