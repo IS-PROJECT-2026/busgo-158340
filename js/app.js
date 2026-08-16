@@ -253,6 +253,15 @@ continueButton.addEventListener("click", function () {
         return;
     }
 
-    alert(`Seat ${selectedSeat} selected successfully!`);
+    const busName = summaryBus.textContent;
+    const route = summaryRoute.textContent;
+    const price = summaryPrice.textContent;
+
+    showConfirmation(
+        busName,
+        route,
+        selectedSeat,
+        price
+    );
 
 });

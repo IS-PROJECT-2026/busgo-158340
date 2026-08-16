@@ -1,7 +1,10 @@
-function showConfirmation() {
-    console.log("Ticket successfully booked");
-}
+function showConfirmation(busName, route, seat, price) {
+    const confirmationMessage =
+        `Booking confirmed!\n\n` +
+        `Bus: ${busName}\n` +
+        `Route: ${route}\n` +
+        `Seat: ${seat}\n` +
+        `Price: ${price}`;
 
-function sendConfirmation() {
-    console.log("Confirmation sent");
+    alert(confirmationMessage);
 }
