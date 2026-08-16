@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - My Tickets</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tickets.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            BusGo
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="index.html#routes">Routes</a>
+            </li>
+
+            <li>
+                <a href="tickets.html">My Tickets</a>
+            </li>
+
+            <li>
+                <a href="index.html#about">About</a>
+            </li>
+
+        </ul>
+
+        <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+        >
+            ☰
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="tickets-page">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                YOUR BOOKINGS
+            </p>
+
+            <h1>
+                My Tickets
+            </h1>
+
+            <p>
+                View your saved BusGo bookings below.
+            </p>
+
+        </div>
+
+
+        <div
+            id="tickets-container"
+            class="tickets-container"
+        >
+        </div>
+
+
+        <div
+            id="no-tickets"
+            class="no-tickets"
+            hidden
+        >
+
+            <h2>
+                No bookings yet
+            </h2>
+
+            <p>
+                You have not made any BusGo bookings yet.
+            </p>
+
+            <a
+                href="index.html"
+                class="search-button"
+            >
+                Book a Bus
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/tickets.js"></script>
+
+</body>
+
+</html>
