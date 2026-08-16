@@ -249,13 +249,24 @@ seats.forEach(function (seat) {
 });
 continueButton.addEventListener("click", function () {
 
-    if (!selectedSeat) {
+    const busName = summaryBus.textContent.trim();
+    const route = summaryRoute.textContent.trim();
+    const price = summaryPrice.textContent.trim();
+
+    if (!busName || busName === "Not selected") {
+        alert("Please select a bus before continuing.");
         return;
     }
 
-    const busName = summaryBus.textContent;
-    const route = summaryRoute.textContent;
-    const price = summaryPrice.textContent;
+    if (!selectedSeat) {
+        alert("Please select a seat before continuing.");
+        return;
+    }
+
+    if (!route || route === "Not selected") {
+        alert("Please select a valid route before continuing.");
+        return;
+    }
 
     showConfirmation(
         busName,
