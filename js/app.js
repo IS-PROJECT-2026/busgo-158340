@@ -119,7 +119,18 @@ searchForm.addEventListener("submit", function (event) {
         return;
     }
 
+const selectedDate = new Date(travelDate);
+const today = new Date();
 
+today.setHours(0, 0, 0, 0);
+
+if (selectedDate < today) {
+
+    resultsMessage.textContent =
+        "Travel date cannot be in the past.";
+
+    return;
+}
     // Prevent the user from selecting the same location
 
     if (from === to) {
@@ -274,15 +285,11 @@ continueButton.addEventListener("click", function () {
         return;
     }
 
-   const travelDate =
-    document.getElementById("travel-date").value;
-
-showConfirmation(
-    busName,
-    route,
-    selectedSeat,
-    price,
-    travelDate
-);
+    showConfirmation(
+        busName,
+        route,
+        selectedSeat,
+        price
+    );
 
 });
